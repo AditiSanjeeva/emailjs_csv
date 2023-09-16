@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Sender</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Contact Us</h3>
+        <form method="post" enctype="multipart/form-data" id="form-name" onsubmit="sendEmail(event)">
+            <label for="emails">Email:</label>
+            <input type="text" id="emails" name="emails" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="content">Description:</label>
+            <textarea id="content" name="content" rows="4" required></textarea>
+
+            <label for="attachment">Attach a CSV or Excel File (xlsx):</label>
+            <input type="file" id="attachment"
+                accept=".csv,.xlsx">
+
+            <input type="submit" value="Send">
+        </form>
+    </div> 
+    
+</body>
+
+</html>
